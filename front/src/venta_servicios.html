@@ -1,0 +1,202 @@
+---
+title: Empty page
+layout: default
+menu: pages.empty
+---
+
+<div class="container-fluid container-venta m-0">
+  <form action="" class="d-flex justify-content-center align-items-center pt-5">
+    <div class="row row-cards w-75">
+      <!-- Cliente -->
+      <div class="card col-md-12 p-0">
+        <div class="card-header bg-dark form-header">
+          <h5>Datos del Cliente</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="cliente_nombre" placeholder="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" name="cliente_email" placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cliente -->
+
+      <!--  SERVICIOS -->
+      <div class="col-md-12 card p-0">
+        <div class="card-header bg-dark form-header">
+          <h5>Detalle Servicios</h5>
+        </div>
+        <div class="card-body">
+
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+              <tr>
+                <th class="pl-0">Atendió</th>
+                <th>Categoría</th>
+                <th>Servicio</th>
+                <th class="pr-0">Precio</th>
+              </tr>
+              </thead>
+              <tr class="service-row">
+                <td class="pl-0">
+                  <select class="custom-select" name="venta_atendio">
+                    <option value="STATUS_CODE" selected>Francisco</option>
+                    <option value="JSON_BODY">Camila</option>
+                    <option value="HEADERS">Cote</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="custom-select" name="venta_atendio">
+                    <option value="STATUS_CODE" selected>Francisco</option>
+                    <option value="JSON_BODY">Camila</option>
+                    <option value="HEADERS">Cote</option>
+                  </select>
+                <td>
+                  <select class="custom-select" name="venta_atendio">
+                    <option value="STATUS_CODE" selected>Francisco</option>
+                    <option value="JSON_BODY">Camila</option>
+                    <option value="HEADERS">Cote</option>
+                  </select>
+                </td>
+                <td class="pr-0">
+                  <input type="text" class="form-control" value="200">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <button id="addService" type="button" class="btn btn-icon btn-primary float-right"><i class="fe fe-plus-circle"></i></button>
+          <button id="removeService" type="button" class="btn btn-icon btn-danger float-right mr-1" disabled="disabled"><i class="fe fe-minus-circle"></i></button>
+        </div>
+      </div>
+      <!--  end SERVICIOS -->
+
+        <div class="row row-eq-height">
+          <!-- PAGO -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card">
+            <div class="card-header bg-dark form-header">
+              <h5>Medio de Pago</h5>
+            </div>
+            <div class="card-body">
+              <div class="row d-flex align-items-stretch">
+                <div class="col-md-12 p-5 d-flex align-items-stretch">
+                  <div class="selectgroup selectgroup-vertical w-100">
+        						<label class="selectgroup-item ">
+        							<input type="radio" name="shipping" value="unregistered" class="selectgroup-input" checked="">
+        							<span class="selectgroup-button">Efectivo</span>
+        						</label>
+        						<label class="selectgroup-item">
+        							<input type="radio" name="shipping" value="priority" class="selectgroup-input">
+        							<span class="selectgroup-button">Transbank</span>
+        						</label>
+        						<label class="selectgroup-item">
+        							<input type="radio" name="shipping" value="express" class="selectgroup-input">
+        							<span class="selectgroup-button">Transferencia</span>
+        						</label>
+        					</div>
+
+
+
+                </div>
+
+
+
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="form-label">Información del Pago</label>
+                    <input type="text" class="form-control" name="cliente_nombre" placeholder="">
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- END PAGO -->
+
+        <!-- RESUMEN -->
+        <div class="col-md-6 d-flex align-items-stretch">
+          <div class="card d-flex align-items-stretch">
+            <div class="card-header bg-dark form-header">
+              <h5>Resumen</h5>
+            </div>
+            <div class="card-body">
+
+              <div class="row">
+                <div class="col-md-6">
+                  <span>Precio Real</span>
+                </div>
+                <input type="text" class="form-control col-md-6 mb-3" disabled="disabled">
+                <div class="col-md-6">
+                  <span>Descuentos</span>
+                </div>
+                <input type="text" class="form-control col-md-6 mb-3" disabled="disabled">
+                <div class="col-md-6">
+                  <span>Precio Final</span>
+                </div>
+                <input type="text" class="form-control col-md-6 mb-5" disabled="disabled">
+              </div>
+
+
+              <input type="submit" class="btn btn-pill btn-success float-right " value="Finalizar Venta" />
+              <input type="button" class="btn btn-pill btn-primary float-right mr-1" value="Aplicar Descuento" data-toggle="modal" data-target="#discountModal"/>
+
+
+
+
+
+
+                <!-- Modal descuento -->
+                <div class="modal fade" id="discountModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        ...
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end Modal descuento -->
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <!-- END RESUMEN -->
+        </div>
+
+
+
+
+
+
+      </div>
+
+      </form>
+  </div>

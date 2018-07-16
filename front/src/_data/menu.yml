@@ -1,0 +1,13 @@
+index:
+  name: Home
+  icon: fe fe-home
+  url: index.html
+
+venta-servicio:
+  name: Venta Servicio
+  icon: fe fe-box
+  url: venta_servicios.html
+resumen-dia:
+  name: Resumen del día
+  icon: fe fe-calendar
+  url: resumen_dia.html
