@@ -1,5 +1,5 @@
 ---
-title: Empty page
+title: Venta Servicios
 layout: default
 menu: pages.empty
 ---
@@ -51,9 +51,10 @@ menu: pages.empty
               <tr class="service-row">
                 <td class="pl-0">
                   <select class="custom-select" name="venta_atendio">
-                    <option value="STATUS_CODE" selected>Francisco</option>
-                    <option value="JSON_BODY">Camila</option>
-                    <option value="HEADERS">Cote</option>
+                    <option value=" " selected></option>
+                    <option value="Francisco">Francisco</option>
+                    <option value="Camila">Camila</option>
+                    <option value="Cote">Cote</option>
                   </select>
                 </td>
                 <td>
@@ -80,6 +81,58 @@ menu: pages.empty
         </div>
       </div>
       <!--  end SERVICIOS -->
+
+      <!--  Productos -->
+      <div class="col-md-12 product-card card p-0">
+        <div class="card-header bg-dark form-header">
+          <h5>Detalle Productos</h5>
+          <div class="card-options">
+            <label class="custom-switch m-0">
+              <input type="checkbox" value="1" class="custom-switch-input" id="enableProduct">
+              <span class="custom-switch-indicator"></span>
+            </label>
+          </div>
+        </div>
+        <div class="card-body">
+
+          <div class="table-responsive">
+            <table class="table mb-0">
+              <thead>
+              <tr>
+                <th>Código</th>
+                <th>Categoría</th>
+                <th>Producto</th>
+                <th class="pr-0">Precio</th>
+              </tr>
+              </thead>
+              <tr class="product-row">
+                <td>
+                  <input type="text" name="venta_producto_codigo" class="form-control">
+                </td>
+                <td class="pl-0">
+                  <select class="custom-select" name="venta_producto_categoria">
+                    <option value="STATUS_CODE" selected>*</option>
+                    <option value="JSON_BODY">-</option>
+                    <option value="HEADERS">-</option>
+                  </select>
+                </td>
+                <td>
+                  <select class="custom-select" name="venta_producto_detalle">
+                    <option value="STATUS_CODE" selected>Francisco</option>
+                    <option value="JSON_BODY">Camila</option>
+                    <option value="HEADERS">Cote</option>
+                  </select>
+                <td class="pr-0">
+                  <input type="text" class="form-control" value="200" name="venta_producto_precio">
+                </td>
+              </tr>
+            </table>
+          </div>
+          <button id="addProduct" type="button" class="btn btn-icon btn-primary float-right"><i class="fe fe-plus-circle"></i></button>
+          <button id="removeProduct" type="button" class="btn btn-icon btn-danger float-right mr-1" disabled="disabled"><i class="fe fe-minus-circle"></i></button>
+        </div>
+      </div>
+      <!--  end Productos -->
 
         <div class="row row-eq-height">
           <!-- PAGO -->
